@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework 5 - Week 5</title>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wholecard">
+      <h1>
+        Weather App-W5H5
+      </h1>
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div class="cardmain" style="width: 13rem;">
+              <img
+                src="image/partiallycloudy.png"
+                alt="current forecast"
+                width="200"
+              />
+
+              <div class="card-body">
+                <p class="card-text">
+                  <span id="city">
+                    <strong> NEW YORK </strong>
+                  </span>
+                  <br />
+                  <span id="temp">
+                    28˚C | 19˚C
+                  </span>
+                  <br />
+                  <span id="weather-type">
+                    Cloudy
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-5">
+            <form id="newcityform">
+              <div>
+                <input
+                  type="text"
+                  class="form-control form-control-lg"
+                  id="newcityinput"
+                  placeholder="Look up another city"
+                  autocomplete="off"
+                />
+              </div>
+            </form>
+            <div class="col">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1"></div>
+                <div class="col" id="extra">
+                  <br />
+                  <br />
+                  Precipitation: 22% <br />
+                  Wind Speed: 5km/hr <br />
+                  Feels like: 22°
+
+                  <div class="row" id="displayDate">
+                    <strong>
+                      <br /><br />
+                      July 5, 2020 <br />
+                      Sunday 10:00 PM
+                    </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <form id="searchbutton">
+                <button
+                  type="search"
+                  class="btn btn-primary btn-lg"
+                  class="searchbtn"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+            <div class="row"><br /><br /></div>
+            <div class="row">
+              <form id="currentbutton">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg"
+                  class="currentbtn"
+                >
+                  Current
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col"></div>
+          <div class="col-7"></div>
+          <div class="col">
+            <div
+              class="btn-group btn-group-toggle btn-lg"
+              id="unitselect"
+              data-toggle="buttons"
+            >
+              <label class="btn btn-secondary active btn-lg">
+                <input type="radio" name="options" id="cel" checked /> C°
+              </label>
+              <label class="btn btn-secondary btn-lg">
+                <input type="radio" name="options" id="far" /> F°
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row" id="weekday">
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Monday</h5>
+              <img src="image/mayrain.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Tuesday</h5>
+              <img src="image/rain.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Wednesday</h5>
+              <img src="image/partiallycloudy.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Thursday</h5>
+              <img src="image/sleet.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Friday</h5>
+              <img src="image/snow.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 13rem;">
+            <div class="widget">
+              <h5 class="card-title">Saturday</h5>
+              <img src="image/thunderstorm.png" width="200" />
+              <br /><br />
+              <p class="card-text">25˚ | 19˚</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <footer>
+        This project is coded by
+        <a href="https://www.linkedin.com/in/snehal-ingle/"> Snehal Ingle </a>
+        and is
+        <a href="https://github.com/sxr1967/learning-how-to-git-trial">
+          open-sourced on Git-hub</a
+        >
+      </footer>
+      <script src="src/app.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+.wholecard {
+  border: 5px solid black;
+  display: block;
+  padding: 10px;
+  margin: 100px auto;
+  text-align: center;
+  width: 50%;
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+}
+h1 {
+  color: rgb(165, 2, 24);
+  font-size: 55px;
+  text-align: center;
+  padding: 5px;
+  margin: 10px auto;
+  border: 1px solid rgb(46, 7, 7);
+}
+h5 {
+  font-weight: 600px;
+  font-size: 30px;
+}
+#displayDate {
+  line-height: 30px;
+  text-align: right;
+  color: rgb(151, 62, 10);
+  font-size: 28px;
+}
+#weekday {
+  margin: 10px 15px auto;
+}
+#extra {
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+#currentbtn,
+#searchbtn {
+  background-color: #2196f3;
+  padding: 25px auto;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.card {
+  border: 1px solid grey;
+  background: rgb(155, 69, 69);
+  opacity: 90%;
+  margin: 2px;
+  padding: 20px auto;
+  text-align: left;
+}
+.cardmain {
+  border: 1px solid grey;
+  background: rgb(185, 94, 94);
+  opacity: 90%;
+  display: block;
+  position: relative;
+  top: 10px;
+  left: -40px;
+  height: 350px;
+  margin: -25px;
+  background-position: 50% 50%;
+  padding: 10px;
+}
+.card-text {
+  font-size: 30px;
+}
+.widget {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  background-position: 50% 50%;
+  height: 350px;
+  transform: none;
+}
+footer {
+  font-size: 25px;
+  line-height: 80px;
+}
+#city,
+#temp,
+#weather-type {
+  margin: 10px auto;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 10px;
+  margin: 10px auto;
+  text-transform: uppercase;
+}
+a {
+  color: blue;
+  text-decoration: underline;
+}
